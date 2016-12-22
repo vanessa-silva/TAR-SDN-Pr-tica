@@ -1,5 +1,34 @@
 \section*{Tecnologia utilizada}
 
+Para a realização deste trabalho prático, utilizou-se o emulador Mininet (\ref{mininet}), o protocolo OpenFlow (\ref{openflow}), o controlador Floodlight e o programa Wireshark (\ref{wireshark}).
+
+\subsection{Mininet} \label{mininet}
+
+Mininet é um emulador de redes, desenvolvido por pesquisadores da Universidade de Stanford nos Estados Unidos, com o objetivo de apoiar pesquisas colaborativas, permitindo protótipos autônomos de redes definidas por software (SDNs), de modo a que qualquer pessoa possa fazer o seu download, executar, avaliar, explorar e ajustar.
+É um emulador do tipo CBE (Container-Based Emulation), onde um ambiente de \textit{hosts} virtuais, \textit{switches} e \textit{links} é executado em um servidor multicore moderno, usando código e kernel com elementos de rede emulados por software, é então uma forma mais leve de virtualização onde muitos recursos do sistema são compartilhados. 
+
+O Mininet é capaz de emular \textit{links}, \textit{hosts}, \textit{switches} e controladores, utilizando processos que rodem em espaços de nomes da rede (\textit{network namespaces}) e pares Ethernet virtuais.
+
+\begin{itemize}
+
+	\item \textit{Links}: Um par Ethernet virtual atua como um cabo que conecta duas interfaces virtuais. Os pacotes enviados através de uma interface são entregues na outra e cada interface se comporta como uma interface Ethernet completa.
+	
+	\item \textit{Host}: É um processo da shell movido para o seu próprio espaço de nome da rede, ou seja, cada \textit{host} apresenta uma instância da interface de rede independente. Cada dispositivo apresenta uma ou mais interfaces virtuais.
+	
+	\item \textir{Switches}: \textit{Switches} OpenFlow são remotamente configurados e gerenciados pelo controlador, estes, também, podem ser configurados para agirem como \textit{switches} convencionais.
+	
+	\item Controladores: Controladores OpenFlow podem estar em qualquer parte da rede, ou seja, na rede física ou na rede virtual.
+
+\end{itemize}
+
+De forma a controlar e gerenciar todos os dispositivos emulados, o Mininet fornece uma CLI (\textit{Command Line Interface}) que conhece toda a rede, ou seja, através de uma única linha de comandos, pode-se controlar todos os dispositivos emulados. Outra vantagem é a possibilidade de criar topologias de rede através de uma API (\textit{Application Programming Interface}) para programação em Python.
+
+\subsection{OpenFlow} \label{openflow}
+
+
+
+\subsection{Wireshark} \label{wireshark}
+
 
 \section*{Objetivo do trabalho laboratorial}
 
