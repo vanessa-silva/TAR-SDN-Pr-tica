@@ -1,0 +1,129 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Author: Miguel Ferreira e Vanessa Silva                             %
+% Info:                                                               %
+% Language: Portuguese                                                %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[a4paper,11pt,pdftex]{article}
+\usepackage[T1]{fontenc}
+\usepackage[portuguese]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{fullpage}
+\usepackage[top=2.5cm, bottom=2.5cm, left=2.5cm , right=2.5cm]{geometry}
+\usepackage{marginnote}        %use \marginnote{}
+\usepackage[pdftex]{graphicx}  %Support for images in pdf
+\usepackage{hyperref} 	       %Support for hyperlinks in pdf
+\usepackage{textcomp}
+\usepackage{tikz}
+%\usepackage{times}            %times font
+\usepackage{pdfpages} % Include a pdf page
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{verbatim}
+\usepackage{color}
+\usepackage{listings}          %for simple inclusion of source code
+\usepackage[cc]{titlepic}      %glider on title page
+\usepackage{url}
+%\usepackage{natbib}
+\usepackage{rotating}
+\usepackage{lipsum}
+\usepackage{fancyhdr}
+\usepackage[portuguese,ruled]{algorithm2e}
+\usepackage[noend]{algpseudocode}
+\usepackage{footnote}
+\usepackage{amsfonts}
+\usepackage{mathtools}
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+\definecolor{lightgrey}{RGB}{238,238,238}
+\usepackage{natbib} 
+\usepackage[portuguese]{babel} 
+
+\usepackage{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%IMPORTANTE COMMANDS I FORGET%%%%%%%%%%%%%%%%%%%%%%%
+% \marginnote                                                         %
+% \footnote                                                           %
+% \hiperlink{tag}{text} & hypertarget{tag}{text}                      %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% [hidelinks] doesn't work so:                                        %
+%                                                                     %
+%  \hypersetup{                                                       %
+%   colorlinks=false,                                                 %
+%  pdfborder={0 0 0},                                                 %
+%  }                                                                  %
+% \framebox[\linewidth][l]{                                           %
+% \lstinputlisting[title=HelloWorld.c]{./Programs/HelloWorld.c}       %
+% }                                                                   %
+%\includepdf[pages={{},{1},{},{2},{},{3},{},{4},{},{5},{},{6},{},{7}, %
+%{},{8},{},{9},{},{10},{},{11},{},{12}},pagecommand={\thispagestyle{  %
+% fancy}}]{script}                                                    %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title{Trabalho Prático - SDN}
+
+\author{Remi Dias\\
+  \href{mailto:up201105074@fc.up.pt}{\texttt{up201105074@fc.up.pt}}\\
+  Vanessa Silva\\
+  \href{mailto:up201305731@fc.up.pt}{\texttt{up201305731@fc.up.pt}}\\
+\multicolumn{1}{p{.7\textwidth}}{\centering\emph{
+\\Tópicos Avançados em Redes,\\Departamento de Ciências de Computadores,\\Faculdade de Ciências da Universidade do Porto}}
+}
+\date{\today}
+%\titlepic{
+%}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%% SETTINGS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\lstset{
+  language=C,   % choose the language of the code
+  numbers=left,        % where to put the line-numbers
+  stepnumber=1,        % the step between two line-numbers.        
+  numbersep=8pt,       % how far the line-numbers are from the code
+  backgroundcolor=\color{lightgrey}, % \usepackage{color}
+  showspaces=false,    % show spaces adding particular underscores
+  showstringspaces=false,        % underline spaces within strings
+  showtabs=false,      % show tabs within strings adding underscores
+  tabsize=2,           % sets default tabsize to 2 spaces
+  captionpos=b,        % sets the caption-position to bottom
+  breaklines=true,     % sets automatic line breaking
+  breakatwhitespace=true, % if automatic breaks only happen atwhitespace
+  title=\lstname,      % show the filename of files \lstinputlisting;
+  frame=single,
+  keywordstyle=\color{blue},          % keyword style
+  commentstyle=\color{dkgreen},       % comment style
+  stringstyle=\color{mauve},
+  basicstyle=\ttfamily,
+}
+\hypersetup{
+    bookmarks=true,         % show bookmarks bar?
+    unicode=true,          % non-Latin characters in Acrobat’sbookmarks
+    pdftoolbar=true,        % show Acrobat’s toolbar?
+    pdfmenubar=true,        % show Acrobat’s menu?
+    pdffitwindow=false,     % window fit to page when opened
+    pdfstartview={FitH},    % fits the width of the page to the window
+    pdftitle={Título},    % title
+    pdfauthor={Miguel Ferreira e Vanessa Silva},                        % author
+    pdfcreator={Miguel Ferreira e Vanessa Silva},   % creator of the document
+%     pdfproducer={Producer}, % producer of the document
+%     pdfkeywords={keyword1} {key2} {key3}, % list of keywords
+%     pdfnewwindow=true,      % links in new window
+%     colorlinks=false,       % false: boxed links; true: colored links
+%     linkcolor=red,          % color of internal links
+%     citecolor=green,        % color of links to bibliography
+%     filecolor=magenta,      % color of file links
+%     urlcolor=cyan           % color of external links
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% END SETTINGS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\maketitle
+%\tableofcontents
+\input{tecnologia.tex}
+%\listoffigures
+%\listoftables
+%\listofalgorithms
+%\bibliographystyle{acm}
+\bibliographystyle{apa} 
+\bibliography{ref}
+\end{document}
