@@ -1,6 +1,6 @@
 \section*{Tecnologia utilizada}
 
-Para a realização deste trabalho prático, utilizou-se o emulador Mininet (\ref{mininet}), o protocolo OpenFlow (\ref{openflow}), o controlador Floodlight e o programa Wireshark (\ref{wireshark}).
+Para a realização deste trabalho prático, utilizou-se o emulador Mininet (\ref{mininet}), o protocolo OpenFlow (\ref{openflow}), o controlador Floodlight. %e o programa Wireshark (\ref{wireshark}).
 
 \subsection{Mininet} \label{mininet}
 
@@ -25,9 +25,21 @@ De forma a controlar e gerenciar todos os dispositivos emulados, o Mininet forne
 
 \subsection{OpenFlow} \label{openflow}
 
+OpenFlow é um protocolo que estabelece comunicações \textit{switches}-controlador.
+Numa rede Openflow quando um dispositivo recebe um pacote, este não toma a decisão de forma autónoma, ele envia o pacote para o controlador que por sua vez utiliza certos critérios de forma a tomar de decisão, este cria uma regra de encaminhamento que passa para o dispositivo solicitante.
 
+O controlador dispõe de todas as informações necessárias para determinar as funções desempenhadas pelo \textit{switch} como, a porta para a qual o fluxo deve ser encaminhado ou descartar os pacotes.
+Ou seja, serve basicamente para adicionar ou remover entradas da tabela de fluxos de todos os \textit{switches} que se encontram a ser controlados por ele.
+Existem muitos tipos de controladores diferentes onde, o estilo de desenvolvimento e as funcionalidades que eles oferecem, são maioritariamente determinados pela linguagem utilizada.
 
-\subsection{Wireshark} \label{wireshark}
+A tabela de fluxos é uma base de dados de entradas de fluxos com alguns componentes principais, onde podemos destacar tarefas como: encaminhamento de um pacote para uma determinada porta do \textit{switch}, descartar um pacote, criptografar esse pacote, etc.
+
+Um \textit{switch} que utiliza Openflow separa o encaminhamento do roteamento de forma a melhorar a gestão da rede.
+A função de encaminhamento permanece no \textit{switch}, mas as decisões de roteamento passam a ser da responsabilidade do controlador.
+
+Openflow permite a manipulação de todo o fluxo de dados, permitindo escolher as rotas a serem seguidas pelos pacotes e o processamento a que eles devem ser submetidos.
+
+%\subsection{Wireshark} \label{wireshark}
 
 
 \section*{Objetivo do trabalho laboratorial}
